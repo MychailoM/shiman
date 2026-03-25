@@ -1,0 +1,45 @@
+:root {
+  /*КОЛЬОРИ */
+  --color-primary: #00A8A8;
+  --color-primary-dark: #006D73;
+  --color-hero: #008080;
+  --color-light-bg: #E6F7F7;
+  --color-white: #FFFFFF;
+  --color-gray-bg: #F5F7F7;
+  --color-heading: #004F4F;
+  --color-text: #2F3E46;
+  --color-accent: #FFD166;
+
+  /*ШРИФТИ */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-text: 'Open Sans', sans-serif;
+  --font-button: 'Montserrat', sans-serif;
+
+  /*РОЗМІРИ ШРИФТІВ */
+  --h1-size: 48px;
+  --h2-size: 36px;
+  --h3-size: 28px;
+  --h4-size: 22px;
+  --text-lg-size: 18px;
+  --text-size: 16px;
+  --text-sm-size: 14px;
+  --button-size: 16px;
+
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --text-lg-weight: 500;
+  --text-weight: 400;
+  --text-sm-weight: 400;
+  --button-weight: 600;
+
+  /*ТІНІ */
+  --shadow-default: 0 5px 15px rgba(0,0,0,0.1);
+  --shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
+
+  /*BORDER RADIUS */
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --radius-image: 14px;
+}
