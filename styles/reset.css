@@ -89,3 +89,22 @@ input[type='file'] {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media (min-width: 429px) {
+  .container {
+    max-width: 720px;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1280px;
+  }
+}
