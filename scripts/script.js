@@ -10,7 +10,7 @@ openMobileMenu.addEventListener('click', () => {
 
 closeMobileMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
-    document.body.style.overflowY= 'auto';
+    document.body.style.overflowY = 'auto';
 })
 
 mobileLinks.forEach(link => {
@@ -22,40 +22,46 @@ mobileLinks.forEach(link => {
 
 
 
-const slides = document.getElementById("slides");
-const totalSlides = slides.children.length;
-const reviewsNum = document.querySelector(".reviews-num");
-let index = 0;
+const reviewSlides = document.getElementById("reviews-slides");
 
-function showSlide(i) {
-  if (i < 0) index = totalSlides - 1;
-  else if (i >= totalSlides) index = 0;
-  else index = i;
+if (reviewSlides) {
+  const reviewTotalSlides = reviewSlides.children.length;
+  const reviewsNum = document.querySelector(".reviews-num");
 
-  slides.style.transform = `translateX(-${index * 100}%)`;
-  reviewsNum.textContent = `${index + 1}/${totalSlides}`;
+  let reviewIndex = 0;
+
+  function showSlide(i) {
+    if (i < 0) reviewIndex = reviewTotalSlides - 1;
+    else if (i >= reviewTotalSlides) reviewIndex = 0;
+    else reviewIndex = i;
+
+    reviewSlides.style.transform = `translateX(-${reviewIndex * 100}%)`;
+    reviewsNum.textContent = `${reviewIndex + 1}/${reviewTotalSlides}`;
+  }
+
+  reviewsNum.textContent = `1/${reviewTotalSlides}`;
+
+  document.querySelector(".prevSlide")?.addEventListener("click", () => {
+    showSlide(reviewIndex - 1);
+  });
+
+  document.querySelector(".nextSlide")?.addEventListener("click", () => {
+    showSlide(reviewIndex + 1);
+  });
 }
-
-reviewsNum.textContent = `1/${totalSlides}`;
-
-document.querySelector(".prevSlide").addEventListener("click", () => {
-  showSlide(index - 1);
-});
-
-document.querySelector(".nextSlide").addEventListener("click", () => {
-  showSlide(index + 1);
-});
-
-
-
 
 const items = document.querySelectorAll('.accordion-item');
 
 items.forEach(item => {
-  item.querySelector('.accordion-title').addEventListener('click', () => {
-    
+  const title = item.querySelector('.accordion-title');
+
+  title.addEventListener('click', () => {
+    const isActive = item.classList.contains('accordion-active');
+
     items.forEach(i => i.classList.remove('accordion-active'));
-    
-    item.classList.add('accordion-active');
+
+    if (!isActive) {
+      item.classList.add('accordion-active');
+    }
   });
 });
