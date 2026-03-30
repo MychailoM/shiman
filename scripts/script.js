@@ -1,6 +1,7 @@
 const openMobileMenu = document.querySelector('.open-mobile-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeMobileMenu = document.querySelector('.close-mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-menu-nav-link');
 
 openMobileMenu.addEventListener('click', () => {
     mobileMenu.classList.add('open');
@@ -11,6 +12,13 @@ closeMobileMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
     document.body.style.overflowY= 'auto';
 })
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflowY = 'auto';
+  });
+});
 
 
 
@@ -36,4 +44,18 @@ document.querySelector(".prevSlide").addEventListener("click", () => {
 
 document.querySelector(".nextSlide").addEventListener("click", () => {
   showSlide(index + 1);
+});
+
+
+
+
+const items = document.querySelectorAll('.accordion-item');
+
+items.forEach(item => {
+  item.querySelector('.accordion-title').addEventListener('click', () => {
+    
+    items.forEach(i => i.classList.remove('accordion-active'));
+    
+    item.classList.add('accordion-active');
+  });
 });
