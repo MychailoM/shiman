@@ -4,10 +4,10 @@
   --color-primary-light: #4dd6d6;
 
   --color-hero: #1f8282;
-  --color-hero-deep: #0e5f5f;
+  --color-hero-deep: #094163;
 
   --color-light-bg: #e6f7f7;
-  --color-second-light-bg: #d1fefe;
+  --color-second-light-bg: #D6F3F0;
   --color-gray-bg: #f5f7f7;
   --color-white: #ffffff;
 
@@ -148,6 +148,7 @@
 .middle-header-img-wrap {
   display: none;
 }
+
 
 
 .header-bottom-section {
@@ -486,11 +487,10 @@
   font-family: sans-serif;
   padding: 24px;
   border-radius: var(--radius-card);
-  background-color: var(--color-white);
 }
 
 .accordion-item {
-  background-color: var(--color-second-light-bg);
+  background-color: var(--color-primary-dark);
   border-radius: var(--radius-card);
   margin-bottom: 12px;
   border: 1px solid rgba(3,72,72,0.12);
@@ -503,9 +503,9 @@
 }
 
 .accordion-title {
-  padding: 15px;
+  padding: 25px;
   cursor: pointer;
-  color: var(--color-heading);
+  color: var(--color-white);
   font-size: var(--h4-size);
   font-weight: var(--text-lg-weight);
   font-family: var(--font-heading);
@@ -516,11 +516,23 @@
   overflow: hidden;
   padding: 0 15px;
   background-color: var(--color-white);
-  border-radius: var(--radius-card);
+  border-radius: 0 0 16px 16px;
   color: var(--color-text);
   font-size: var(--text-lg-size);
   font-weight: var(--text-lg-weight);
   font-family: var(--font-text);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.accordion-active .accordion-content {
+  max-height: 400px;
+  opacity: 1;
 }
 
 .accordion-item.accordion-active {
@@ -896,4 +908,45 @@
   .reviews {
     padding: 64px 0;
   }
+
+  .asks {
+  padding: 100px 0 32px 0;  
+}
+
+.accordion-item{
+  position: relative;
+}
+
+.plus {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  width: 56px;
+  height: 56px;
+  background: var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 4px;
+  background: var(--color-heading);
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion-active .plus::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+  
+}
 }

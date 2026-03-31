@@ -54,8 +54,9 @@ const items = document.querySelectorAll('.accordion-item');
 
 items.forEach(item => {
   const title = item.querySelector('.accordion-title');
+  const plus = item.querySelector('.plus');
 
-  title.addEventListener('click', () => {
+  function toggleAccordion() {
     const isActive = item.classList.contains('accordion-active');
 
     items.forEach(i => i.classList.remove('accordion-active'));
@@ -63,5 +64,8 @@ items.forEach(item => {
     if (!isActive) {
       item.classList.add('accordion-active');
     }
-  });
+  }
+
+  title.addEventListener('click', toggleAccordion);
+  plus.addEventListener('click', toggleAccordion);
 });
