@@ -5,20 +5,24 @@ const mobileLinks = document.querySelectorAll('.mobile-menu-nav-link');
 
 openMobileMenu.addEventListener('click', () => {
     mobileMenu.classList.add('open');
-    document.body.style.overflow= 'hidden';
+    document.body.classList.add('no-scroll');
 })
 
 closeMobileMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
-    document.body.style.overflowY = 'auto';
+    document.body.classList.remove('no-scroll');
 })
 
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
-    document.body.style.overflowY = 'auto';
+    document.body.classList.remove('no-scroll');
   });
 });
+
+
+
+
 
 
 
@@ -50,6 +54,15 @@ if (reviewSlides) {
   });
 }
 
+
+
+
+
+
+
+
+
+
 const items = document.querySelectorAll('.accordion-item');
 
 items.forEach(item => {
@@ -69,3 +82,44 @@ items.forEach(item => {
   title.addEventListener('click', toggleAccordion);
   plus.addEventListener('click', toggleAccordion);
 });
+
+
+
+
+
+
+
+
+
+
+const contactBtn = document.querySelector('.contact-btn');
+const contactBackdrop = document.querySelector('.contact-backdrop');
+const contactClose = document.querySelector('.close-contact-modal');
+
+
+contactBtn.addEventListener("click", () => {
+  contactBackdrop.classList.add('active');
+  document.body.classList.add('no-scroll');
+});
+
+contactClose.addEventListener("click", () => {
+  contactBackdrop.classList.remove('active');
+  document.body.classList.remove('no-scroll');
+});
+
+
+
+
+
+
+
+
+
+const onTop = document.querySelector('.onTop');
+
+onTop.addEventListener('click', () => {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+})

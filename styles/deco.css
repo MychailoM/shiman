@@ -10,7 +10,6 @@
   --color-hero-deep: #0e5f5f;
 
   --color-light-bg: #e6f7f7;
-  --color-second-light-bg: #d1fefe;
   --color-gray-bg: #f5f7f7;
   --color-white: #ffffff;
 
@@ -66,8 +65,6 @@ html {
 }
 
 body {
-  background: var(--gradient-soft);
-  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   animation: pageFade 0.6s ease;

@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="./styles/deco.css">
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <div class="header-top-section">
         <div class="container">
           <div class="top-header">
@@ -439,6 +439,43 @@
       <button type="button" class="close-mobile-menu">Закрити</button>
     </div>
 
+    <button type="button" class="onTop">
+      <div class="onTop-line"></div>
+      <div class="onTop-line"></div>
+    </button>
+
+    <button class="contact-btn" type="button">
+      Зв'язатись з нами
+    </button>
+
+    <div class="contact-backdrop">
+      <div class="contact-modal">
+        <button class="close-contact-modal" type="button">
+          <div class="close-line"></div>
+          <div class="close-line"></div>
+        </button>
+        <div class="contact-wrap">
+          <h3 class="contact-title">
+            Напишіть нам:
+          </h3>
+          <a href="mailto:shiman@gmail.com" class="contact-email">shiman@gmail.com</a>
+        </div>
+        <div class="contact-wrap">
+          <h3 class="contact-title">
+            Подзвоніть нам:
+          </h3>
+          <a href="tel:+3808888888" class="contact-tell">+380-888-88-88</a>
+        </div>        
+        <div class="contact-wrap">
+          <h3 class="contact-title">
+            Замовте дзвінок:
+          </h3>
+          <a href="#" class="contact-order-tell">Замовити</a>
+        </div>        
+      </div>
+    </div>
+
     <script type="module" src="scripts/script.js"></script>
   </body>
+  
 </html>
