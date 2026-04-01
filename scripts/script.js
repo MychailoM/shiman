@@ -111,10 +111,6 @@ contactClose.addEventListener("click", () => {
 
 
 
-
-
-
-
 const onTop = document.querySelector('.onTop');
 
 onTop.addEventListener('click', () => {
@@ -123,3 +119,23 @@ onTop.addEventListener('click', () => {
     behavior: 'smooth'
   });
 })
+
+
+
+
+const ourWorksSlides = document.querySelectorAll('.ourWorks-slide');
+
+    let slidesCounter = 0
+
+setInterval(() => {
+  ourWorksSlides.forEach(ourWorksSlide => {
+    ourWorksSlide.classList.remove('active');
+  })
+  ourWorksSlides[slidesCounter].classList.add('active');
+
+  slidesCounter += 1;
+
+  if(slidesCounter >= ourWorksSlides.length){
+    slidesCounter = 0;
+  }
+}, 3000)
