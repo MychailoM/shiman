@@ -161,6 +161,7 @@ button,
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
+  text-align: center;
 }
 
 .order-service-link:hover,

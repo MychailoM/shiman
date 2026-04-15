@@ -289,7 +289,6 @@
 
 .prices{
   padding: 36px 0;
-  background-color: var(--color-second-light-bg);
 }
 
 .prices-container{
@@ -332,6 +331,7 @@
   justify-content: space-between;
   transition: 0.3s;
   gap: 12px;
+  border: 1px solid var(--color-primary);
 }
 
 .flat-price:hover {
@@ -425,6 +425,7 @@
   justify-content: space-between;
   transition: 0.3s;
   gap: 12px;
+  border: 1px solid var(--color-primary);
 }
 
 .house-price:hover {
