@@ -104,6 +104,8 @@ body::before {
   animation: floatGlow 10s infinite alternate ease-in-out;
 }
 
+
+
 body::after {
   background:
     radial-gradient(
@@ -121,6 +123,12 @@ body::after {
   to {
     transform: translate(80px, 60px);
   }
+}
+
+@media (max-width: 720px) {
+body::before {
+  background: rgba(0, 168, 168, 0.09);
+}
 }
 
 a,
