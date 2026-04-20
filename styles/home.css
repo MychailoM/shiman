@@ -239,10 +239,6 @@
   border-radius: 0 8px 8px 0;
 }
 
-.about {
-  padding: 32px 0;
-  background-color: var(--color-white);
-}
 
 .about-container {
   display: flex;
@@ -276,31 +272,36 @@
   font-family: var(--font-text);
 }
 
-.services {
-  border-top: var(--border-section);
-  border-bottom: var(--border-section);
-  background-color: var(--color-second-light-bg);
-  padding: 32px 0;  
+
+.advantages-list{
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
 }
 
-.services-card{
-  border: 1px solid rgba(3,72,72,0.12);
-  box-shadow: var(--shadow-md);
-}
-
-.services-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
-}
-
-.services-title {
+.advantages-item{
+  width: 22%;
   text-align: center;
-  font-size: var(--h2-size);
-  color: var(--color-heading);
-  font-family: var(--font-heading);
-  font-weight: var(--h2-weight);
-  margin-bottom: 24px;
+  border: 1px solid var(--color-border);
+  padding: 16px;
+  border-radius: var(--radius-card);
+  position: relative;
+  top: 10px;
+  font-size: var(--text-size);
+  font-weight: var(--text-lg-weight);
+  font-family: var(--font-text);
+  color: var(--color-border);
+  background-color: transparent;
+  transition: transform 0.3s ease;
 }
+
+.advantages-item::before{}
+
+.advantages-item:hover{
+  transform: translateY(-12px);
+}
+
 
 .services-box {
   display: flex;
@@ -321,6 +322,13 @@
   justify-content: center;
   gap: 12px;
   background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
 }
 
 .service-card-name {
@@ -342,20 +350,6 @@
 .service-card-link:focus {
   padding-bottom: 4px;
   border-bottom: 1px solid var(--color-text);
-}
-
-.reviews {
-  padding: 32px 0;
-  background-color: var(--color-white);
-}
-
-.review-title {
-  text-align: center;
-  color: var(--color-heading);
-  font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
-  font-family: var(--font-heading);
-  margin-bottom: 20px;
 }
 
 .carousel {
@@ -480,27 +474,9 @@
   opacity: 1;
 }
 
-.asks {
-  border-top: var(--border-section);
-  border-bottom: var(--border-section);
-  background-color: var(--color-second-light-bg);
-  padding: 32px 0;  
-}
-
-.asks-title {
-  text-align: center;
-  font-size: var(--h2-size);
-  color: var(--color-heading);
-  font-family: var(--font-heading);
-  font-weight: var(--h2-weight);
-  margin-bottom: 24px;
-}
-
 .asks-accordion {
   width: 95%;
-  margin: 20px auto;
   font-family: sans-serif;
-  padding: 24px 0;
   border-radius: var(--radius-card);
 }
 
@@ -561,20 +537,6 @@
 }
 
 
-
-.ourWorks{
-  padding: 32px 0;
-  background-color: var(--color-white);
-}
-
-.ourWorks-title {
-  text-align: center;
-  color: var(--color-heading);
-  font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
-  font-family: var(--font-heading);
-  margin-bottom: 40px;
-}
 
 .ourWorks-carousel{
   width: 100%;
@@ -894,25 +856,9 @@
     border-left: 1px solid var(--color-border);
   }
 
-  .services {
-    padding: 64px 0;
-  }
-
-  .services-title {
-    margin-bottom: 64px;
-  }
-
   .services-box {
     gap: 16px;
   }
-
-  .reviews {
-    padding: 64px 0;
-  }
-
-  .asks {
-  padding: 100px 0 32px 0;  
-}
 
 .accordion-item{
   position: relative;
@@ -950,10 +896,5 @@
 
 .accordion-active .plus::after {
   transform: translate(-50%, -50%) rotate(0deg);  
-}
-
-.ourWorks{
-  padding: 64px 0 32px 0;
-  background-color: var(--color-white);
 }
 }

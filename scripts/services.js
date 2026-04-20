@@ -24,18 +24,20 @@ mobileLinks.forEach(link => {
 const services = document.querySelectorAll('.cleaning-area');
 
 services.forEach((service) => {
-  const serviceToggler = () => {
+  const title = service.querySelector('.cleaning-area-title');
+
+  title.addEventListener('click', () => {
+    if (window.innerWidth >= 720) return;
+
     const isActive = service.classList.contains('active');
 
-    services.forEach(i => i.classList.remove('active'));
+    services.forEach(item => item.classList.remove('active'));
 
-    if(!isActive){
+    if (!isActive) {
       service.classList.add('active');
     }
-  }
-
-  service.addEventListener('click', serviceToggler)
-})
+  });
+});
 
 
 const contactBtn = document.querySelector('.contact-btn');

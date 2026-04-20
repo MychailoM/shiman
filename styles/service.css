@@ -18,6 +18,7 @@
 
   --color-accent-first: #ffb300;
   --color-accent-second: #25ff75;
+  --color-accent-third: #0db54b;
   --color-accent-danger: #ff4d4d;
   --color-accent-info: #4da3ff;
   --color-accent-purple: #a855f7;
@@ -93,11 +94,9 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background-color: var(--color-hero);
   border-top: var(--border-section);
   border-bottom: var(--border-section);
   background: var(--gradient-hero);
-  position: relative;
   overflow: hidden;
 }
 
@@ -110,6 +109,7 @@
     rgba(255, 255, 255, 0.1),
     transparent 60%
   );
+  pointer-events: none;
 }
 
 .bottom-header {
@@ -185,9 +185,7 @@
 
 .hero-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
+  justify-content: center;
 }
 
 .service-title {
@@ -217,15 +215,7 @@
   gap: 12px;
 }
 
-.cleaning-area:nth-child(2n-1) {
-  border: 1px solid var(--color-primary);
-  border-radius: var(--radius-card);
-}
 
-.cleaning-area:nth-child(2n) {
-  border: 1px solid var(--color-primary-dark);
-  border-radius: var(--radius-card);
-}
 
 .cleaning-area.additional {
   width: 100%;
@@ -236,7 +226,10 @@
   font-size: var(--h4-size);
   border-radius: var(--radius-card);
   padding: 12px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .cleaning-area-title.dark {
@@ -287,16 +280,28 @@
   font-family: var(--font-heading);
 }
 
-.prices{
-  padding: 36px 0;
+.cleaning-area-arrow {
+  position: absolute;
+  right: 12px;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-.prices-container{
+.cleaning-area.active .cleaning-area-arrow {
+  transform: rotate(180deg);
+}
+
+.prices {
+  padding: 36px 0;
+  background-color: var(--color-second-light-bg);
+}
+
+.prices-container {
   display: flex;
   flex-direction: column;
 }
 
-.prices-title{
+.prices-title {
   text-align: center;
   font-size: var(--h2-size);
   font-family: var(--font-heading);
@@ -305,11 +310,11 @@
   margin-bottom: 32px;
 }
 
-
-
-.flat{
+.flat {
   margin-bottom: 40px;
-  padding: 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flat-prices {
@@ -319,18 +324,19 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  margin-bottom: 32px;
+  width: 100%;
 }
 
-.flat-price {  
-  border-radius: 16px;
-  padding: 20px;
+.flat-price {
+  padding: 12px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: 0.3s;
-  gap: 12px;
-  border: 1px solid var(--color-primary);
+  gap: 8px;
+  border-bottom: 1px solid var(--color-muted);
 }
 
 .flat-price:hover {
@@ -342,55 +348,44 @@
   min-height: 140px;
 }
 
-.rooms{
+.rooms {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flat-size {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
 }
 
 .flat-number {
-  font-size: 100px;
+  font-size: 112px;
   font-weight: var(--h1-weight);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   position: relative;
   top: 0;
   left: 0;
 }
 
 .flat-title {
-  display: block;
   font-size: var(--h3-size);
-  font-weight: var(--text-lg-weight);
-  margin-top: 25px;
-  color: var(--color-primary-dark);
-}
-
-.flat-size {
-  display: block;
-  font-size: var(--h4-size);
   font-weight: var(--h3-weight);
-  margin-top: 8px;
   color: var(--color-primary-dark);
-  margin-left: 12px;
 }
 
-.flat-size::before{
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("../icons/maximize.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.flat-info {
-  margin-top: 20px;
+.flat-size-text {
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  color: var(--color-primary-dark);
 }
 
 .flat-price-text {
-  color: var(--color-accent-second);
-  font-size: 20px;
-  font-weight: 700;
+  color: var(--color-accent-third);
+  font-size: var(--h4-size);
+  font-weight: var(--h2-weight);
 }
 
 .flat-time {
@@ -398,24 +393,22 @@
   font-size: var(--h4-size);
   font-weight: var(--h3-weight);
   margin-top: 8px;
-  color: var(--color-primary-dark);
+  color: var(--color-muted);
 }
 
-.house{
-  padding: 0 0 36px 0; 
+.house {
+  padding: 0 0 36px 0;
 }
 
 .house-prices {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
 }
 
-.house-price {  
-  border-radius: 16px;
+.house-price {
   padding: 20px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -423,21 +416,21 @@
   justify-content: space-between;
   transition: 0.3s;
   gap: 12px;
-  border: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-muted);
 }
 
 .house-price:hover {
   transform: translateY(-5px);
 }
 
-.house-info{
+.house-info {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
+  justify-content: center;
 }
 
-.house-area-icon{
+.house-area-icon {
   width: 36px;
   height: 36px;
 }
@@ -451,14 +444,12 @@
   margin-left: 12px;
 }
 
-
 .house-price-text {
-  color: var(--color-accent-second);
+  color: var(--color-accent-third);
   font-size: var(--h3-size);
   font-weight: var(--h3-weight);
+  text-align: center;
 }
-
-
 
 .contact-btn {
   bottom: 9%;
@@ -516,88 +507,6 @@
     font-weight: var(--text-weight);
     line-height: 28px;
   }
-
-  .serviceInclude-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .cleaning-area {
-    width: 48%;
-  }
-
-  .service-title {
-    text-align: star;
-    font-size: var(--h1-size);
-    font-weight: var(--h1-weight);
-    color: var(--color-heading);
-  }
-
-  .serviceInclude-title {
-    text-align: center;
-    font-size: var(--h2-size);
-    font-family: var(--font-heading);
-    font-weight: var(--h2-weight);
-    color: var(--color-heading);
-    margin-bottom: 20px;
-  }
-
-  .flat-prices,
-  .house-prices {
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 10px;
-}
-
-  .cleaning-area-service-list {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px 12px;
-    gap: 12px;
-  }
-
-  .cleaning-area-service-list.additional {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .cleaning-area-service-list.additional .cleaning-area-service-item {
-    width: 45%;
-  }
-
-  .cleaning-area:nth-child(2n-1),
-  .cleaning-area:nth-child(2n) {
-    border: none;
-  }
-
-  .cleaning-area-title {
-    margin-bottom: 12px;
-  }
-
-  .cleaning-area-title.one,
-  .cleaning-area-title.four {
-    background-color: var(--color-primary-dark);
-  }
-
-  .cleaning-area-title.two,
-  .cleaning-area-title.three {
-    background-color: var(--color-primary);
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .house-info{
-  flex-direction: column;
-}
-
-.house-price-text {
-  text-align: center;
-}
 }
 
 @media (min-width: 1024px) {
@@ -658,10 +567,4 @@
     padding-bottom: 4px;
     border-bottom: 2px solid var(--color-white);
   }
-
-    .flat-prices,
-    .house-prices {
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px;
-}
 }
