@@ -277,13 +277,12 @@
   display: flex;  
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3%;
+  gap: 24px;
 }
 
 .advantages-item{
-  width: 22%;
+  width: 260px;
   text-align: center;
-  border: 1px solid var(--color-border);
   padding: 16px;
   border-radius: var(--radius-card);
   position: relative;
@@ -312,17 +311,17 @@
 }
 
 .services-card {
-  width: 320px;
-  height: 160px;
-  padding: 24px 32px;
-  border-radius: var(--radius-card);
+  width: 240px;
+  height: 240px;
+  padding: 24px;  
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   gap: 12px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: var(--gradient-hero);
+  border-radius: var(--radius-card);
   box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -332,24 +331,36 @@
 }
 
 .service-card-name {
-  color: var(--color-heading);
-  font-size: var(--h3-size);
+  color: var(--color-white);
+  font-size: var(--h4-size);
   font-family: var(--font-heading);
   font-weight: var(--text-weight);
+  text-align: center;
+  position: absolute;
+  top: 12px;
+}
+
+.service-card-img{
+  position: absolute;
+  bottom: 60px;
+  width: 120px;
+  height: 105px;
 }
 
 .service-card-link {
-  color: var(--color-text);
-  font-size: var(--h4-size);
+  position: absolute;
+  bottom: 12px;
+  color: var(--color-white);
+  font-size: var(--text-lg-size);
   font-family: var(--font-text);
   font-weight: var(--text-weight);
-  padding-bottom: 5px;
+  opacity: 0.8;
+
 }
 
 .service-card-link:hover,
 .service-card-link:focus {
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--color-text);
+  transform: scale(1.05);
 }
 
 .carousel {
@@ -481,7 +492,7 @@
 }
 
 .accordion-item {
-  background-color: var(--color-primary-dark);
+  background: var(--gradient-hero);
   border-radius: var(--radius-card);
   margin-bottom: 12px;
   border: 1px solid rgba(3,72,72,0.12);
