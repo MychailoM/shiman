@@ -514,9 +514,9 @@ section {
 
 .contact-btn {
   position: fixed;
-  bottom: 10%;
+  bottom: 8%;
   left: -100px;
-  border-radius: 16px 0 0 0;
+  border-radius: 16px 16px 0 0;
   transform: rotateZ(90deg);
   padding: 16px 32px;
   background-color: var(--color-heading);
