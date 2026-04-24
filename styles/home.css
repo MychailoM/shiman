@@ -3,7 +3,7 @@
   --color-primary-dark: #006d73;
   --color-primary-light: #4dd6d6;
 
-  --color-hero: #1f8282;
+  --color-hero: #26a29d;
   --color-hero-deep: #094163;
 
   --color-light-bg: #e6f7f7;
@@ -100,10 +100,10 @@ section:nth-child(2n-1){
 }
 
 .header-middle-section {
-  background-color: var(--color-primary);
+  background-color: var(--color-hero);
   border-top: var(--border-section);
   border-bottom: var(--border-section);
-  opacity: 0.8;
+  
   position: relative;
   position: relative;
   z-index: 1;
