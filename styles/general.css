@@ -115,15 +115,7 @@ button,
   background: var(--color-light-bg);
 }
 
-section:nth-child(2n){
-  background-color: var(--color-second-light-bg);
-  border-top: var(--border-section);
-  border-bottom: var(--border-section);
-}
 
-section:nth-child(2n-1){
-  background-color: var(--color-white);
-}
 
 section {  
   padding: 40px 0;  

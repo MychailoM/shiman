@@ -65,6 +65,16 @@
   --z-modal: 1000;
 }
 
+section:nth-child(2n){
+  background-color: var(--color-second-light-bg);
+  border-top: var(--border-section);
+  border-bottom: var(--border-section);
+}
+
+section:nth-child(2n-1){
+  background-color: var(--color-white);
+}
+
 .header {
   position: relative;
   z-index: var(--z-header);
