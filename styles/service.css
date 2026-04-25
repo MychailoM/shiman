@@ -3,15 +3,15 @@
   --color-primary-dark: #006d73;
   --color-primary-light: #4dd6d6;
 
-  --color-hero: #1f8282;
+  --color-hero: #64c8cd;
   --color-hero-deep: #094163;
 
   --color-light-bg: #e6f7f7;
-  --color-second-light-bg: #d7e6e4;
+  --color-second-light-bg: rgb(216, 236, 232);
   --color-gray-bg: #f5f7f7;
   --color-white: #ffffff;
 
-  --color-heading: #004f4f;
+  --color-heading: #009999;
   --color-text: #2f3e46;
   --color-muted: #6b7c85;
   --color-border: #034848;
@@ -23,7 +23,7 @@
   --color-accent-info: #4da3ff;
   --color-accent-purple: #a855f7;
 
-  --gradient-hero: linear-gradient(135deg, #1f8282, #004f4f);
+--gradient-hero: linear-gradient(135deg, #009999, #64c8cd);
   --gradient-soft: linear-gradient(135deg, #e6f7f7, #d1fefe);
   --gradient-accent: linear-gradient(135deg, #ffb300, #ff7a00);
 
@@ -165,7 +165,7 @@ section:nth-child(2n-1){
   padding: 12px;
   width: 64px;
   text-align: center;
-  color: var(--color-border);
+  color: var(--color-heading);
   font-family: var(--font-button);
   font-weight: var(--button-weight);
 }
@@ -327,7 +327,7 @@ section:nth-child(2n-1){
 .timeline{
   width: 4px;
   height: calc(100% + 64px);
-  background-color: #004f4f;
+  background-color: var(--color-heading);
   position: absolute;
   z-index: 1;
   left: 25px;
@@ -353,7 +353,7 @@ section:nth-child(2n-1){
   font-size: var(--h2-size);
   font-family: var(--font-button);
   font-weight: var(--h2-weight);
-  background: radial-gradient(circle, rgb(43,141,141) 0%, rgba(0,109,115,1) 100%);
+  background: radial-gradient(circle, #64c8cd 0%, #009999 100%);
   flex-shrink: 0;
 }
 
@@ -374,77 +374,65 @@ section:nth-child(2n-1){
 
 .flat-cards{
   display: grid;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 24px;  
   justify-content: center;
-  grid-template-columns: repeat(1fr);
+  grid-template-columns: 1fr;  
 }
 
 .flat-card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-light-bg);
-  transition: transform 0.5s ease;
+  border: 1px solid var(--color-heading);
+  width: 280px;
+  padding-top: 24px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
 }
 
 .flat-card:hover{
-  transform: translateY(-24px);
+  transform: translateY(-12px);
 }
 
 .flat-img{
-  width: 80%;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  height: 160px;
 }
-
 
 .flat-title{
-  color: var(--color-primary-dark);
+  text-align: center;
   font-size: var(--h3-size);
   font-family: var(--font-heading);
-  font-weight: var(--h3-weight);
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.408);
+  color: var(--color-heading);
+  font-weight: var(--h3-weight); 
+  border-bottom: 1px solid var(--color-muted); 
+  padding-bottom: 4px;
   margin-bottom: 12px;
-  text-align: center;
+  width: 100%;
 }
 
-.flat-time{
-  color: var(--color-primary-dark);
+.flat-area{
   font-size: var(--h4-size);
   font-family: var(--font-heading);
-  font-weight: var(--h4-weight);
-  padding-bottom: 8px;
-  margin-bottom: 40px;
-}
-
-.flat-time::first-letter{
-font-weight: var(--h4-weight);
-font-size: var(--h4-size);
-}
-
-.flat-price-wrap{
-  position: relative;
-  bottom: 0;  
-  width: 100%;
-  height: 40px;  
-  display: flex;
-  justify-content: center;
-}
-
-.flat-price-banner{
-  position: absolute;
-  bottom: 0;
-  width: 280px;
+  color: var(--color-heading);
+  font-weight: var(--h4-weight);  
+  margin-bottom: 32px;
 }
 
 .flat-price{
-  position: absolute;
-  font-size: 28px;
-  font-weight: var(--h2-weight);
-  font-family: var(--font-heading);
   color: var(--color-white);
-  top: -16px;
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  width: 100%;
+  background-color: var(--color-heading);
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 0 0 16px 16px;
+}
+
+.contact-btn{
+  left: -90px;
 }
 
 @media (min-width: 720px) {
@@ -571,11 +559,13 @@ font-size: var(--h4-size);
     padding-bottom: 140px;
   }
 
-  
+  .flat-cards{
+  grid-template-columns: repeat(3, 1fr);
+}
 }
 
 @media (min-width: 1240px) {
   .flat-cards{
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 }

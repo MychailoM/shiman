@@ -3,15 +3,15 @@
   --color-primary-dark: #006d73;
   --color-primary-light: #4dd6d6;
 
-  --color-hero: #26a29d;
+  --color-hero: #64c8cd;
   --color-hero-deep: #094163;
 
   --color-light-bg: #e6f7f7;
-  --color-second-light-bg: #d7e6e4;
+  --color-second-light-bg: rgb(216, 236, 232);
   --color-gray-bg: #f5f7f7;
   --color-white: #ffffff;
 
-  --color-heading: #004f4f;
+  --color-heading: #009999;
   --color-text: #2f3e46;
   --color-muted: #6b7c85;
   --color-border: #034848;
@@ -22,7 +22,7 @@
   --color-accent-info: #4da3ff;
   --color-accent-purple: #a855f7;
 
-  --gradient-hero: linear-gradient(135deg, #1f8282, #004f4f);
+  --gradient-hero: linear-gradient(135deg, #009999, #64c8cd);
   --gradient-soft: linear-gradient(135deg, #e6f7f7, #d1fefe);
   --gradient-accent: linear-gradient(135deg, #ffb300, #ff7a00);
 
@@ -109,7 +109,7 @@ section:nth-child(2n-1){
   z-index: 1;
 }
 
-/* .header-middle-section::after {
+.header-middle-section::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -119,7 +119,7 @@ section:nth-child(2n-1){
     rgba(255, 255, 255, 0.1),
     transparent 60%
   );
-} */
+}
 
 .header-middle {
   padding: 40px 0;
@@ -314,19 +314,19 @@ section:nth-child(2n-1){
 }
 
 .advantages-item:nth-child(1)::before{
-  background-image: url(../images/eco.png);
+  background-image: url(../images/shimanEco.png);
 }
 
 .advantages-item:nth-child(2)::before{
-  background-image: url(../images/speed.png);
+  background-image: url(../images/shimanSpeed.png);
 }
 
 .advantages-item:nth-child(3)::before{
-  background-image: url(../images/details.png);
+  background-image: url(../images/shimanDetail.png);
 }
 
 .advantages-item:nth-child(4)::before{
-  background-image: url(../images/cleanliness.png);
+  background-image: url(../images/shimanCleanliness.png);
 }
 
 
@@ -422,7 +422,7 @@ section:nth-child(2n-1){
 }
 
 .reviews-slide {
-  height: 320px;
+  height: 480px;
   width: 100%;
   flex-shrink: 0;
   padding: 30px;
@@ -437,6 +437,11 @@ section:nth-child(2n-1){
   font-weight: var(--h3-weight);
 }
 
+.review-rating{
+  font-size: var(--h3-size);
+  color: var(--color-heading);
+}
+
 .review-text {
   font-family: var(--font-text);
   font-size: var(--text-lg-size);
@@ -447,7 +452,7 @@ section:nth-child(2n-1){
 
 .controls {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -484,7 +489,7 @@ section:nth-child(2n-1){
   display: block;
   margin: 0 auto;
   padding: 18px 32px;
-  background-color: var(--color-primary-dark);
+  background: linear-gradient(0deg,rgba(0, 153, 153, 1) 0%, rgba(34, 193, 195, 1) 100%);
   border-radius: var(--radius-card);
   border: none;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);

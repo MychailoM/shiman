@@ -1,19 +1,20 @@
 :root {
   --color-primary: #00a8a8;
-  --color-primary-dark: #006d73;
+  --color-primary-dark: #00878e;
   --color-primary-light: #4dd6d6;
 
- --color-hero: #26a29d;
-  --color-hero-deep: #0e5f5f;
+ --color-hero: #64c8cd;
+
 
   --color-light-bg: #e6f7f7;
   --color-gray-bg: #f5f7f7;
   --color-white: #ffffff;
+  --color-second-light-bg: rgb(216, 236, 232);
 
-  --color-heading: #004f4f;
+  --color-heading: #009999;
   --color-text: #2f3e46;
   --color-muted: #6b7c85;
-  --color-border: #034848;
+  --color-border: #00a6a6;
 
   --color-accent-first: #ffb300;
   --color-accent-second: #25ff75;
@@ -21,7 +22,7 @@
   --color-accent-info: #4da3ff;
   --color-accent-purple: #a855f7;
 
-  --gradient-hero: linear-gradient(135deg, #1f8282, #004f4f);
+--gradient-hero: linear-gradient(135deg, #009999, #64c8cd);
   --gradient-soft: linear-gradient(135deg, #e6f7f7, #d1fefe);
   --gradient-accent: linear-gradient(135deg, #ffb300, #ff7a00);
 
@@ -135,7 +136,7 @@ section {
   display: block;
   margin: 0 auto;
   padding: 18px 32px;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-heading);
   border-radius: var(--radius-card);
   border: none;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -353,7 +354,7 @@ section {
 .mobile-menu-tell:focus,
 .mobile-menu-email:focus {
   padding-bottom: 4px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-heading);
 }
 
 .mobile-menu-work-time {
@@ -365,8 +366,8 @@ section {
 }
 
 .mobile-menu-nav-list {
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-heading);
+  border-bottom: 1px solid var(--color-heading);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 32px;
@@ -376,7 +377,7 @@ section {
 }
 
 .mobile-menu-nav-link {
-  color: var(--color-border);
+  color: var(--color-heading);
   font-family: var(--font-heading);
   font-weight: var(--button-weight);
   font-size: var(--text-lg-size);
@@ -419,10 +420,10 @@ section {
 
 .close-mobile-menu,
 .on-the-main {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-heading);
   padding: 12px;
   text-align: center;
-  color: var(--color-border);
+  color: var(--color-heading);
   font-family: var(--font-button);
   font-weight: var(--button-weight);
   background-color: transparent;
@@ -433,7 +434,7 @@ section {
 .close-mobile-menu:focus,
 .on-the-main:hover,
 .on-the-main:focus {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-heading);
   padding: 12px;
   text-align: center;
   color: var(--color-white);
@@ -464,13 +465,12 @@ section {
   bottom: 28px;
   right: 28px;
   padding: 12px;
-  background-color: var(--color-heading);
+  background-color: var(--color-primary-dark);
   border-radius: 50%;
   width: 52px;
   height: 52px;
   display: flex;
   align-items: center;
-  border: 2px solid var(--color-border);
   animation: shadow 3s infinite ease-in-out;
   z-index: var(--z-top);
 }
@@ -511,7 +511,7 @@ section {
   border-radius: 16px 16px 0 0;
   transform: rotateZ(90deg);
   padding: 16px 32px;
-  background-color: var(--color-heading);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   font-family: var(--font-button);
   font-size: var(--button-size);
@@ -521,7 +521,7 @@ section {
 }
 
 .contact-btn:hover {
-  box-shadow: 0 0 16px 12px var(--color-accent-info);
+  box-shadow: 0 0 16px 12px var(--color-primary-light);
 }
 
 .contact-backdrop {
