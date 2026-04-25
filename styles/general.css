@@ -133,8 +133,6 @@ section {
 }
 
 .order-service-link {
-  display: block;
-  margin: 0 auto;
   padding: 18px 32px;
   background-color: var(--color-heading);
   border-radius: var(--radius-card);
@@ -146,7 +144,6 @@ section {
   font-weight: var(--button-weight);
   position: relative;
   overflow: hidden;
-  transform: translateZ(0);
   text-align: center;
 }
 
@@ -225,9 +222,8 @@ section {
 .footer-services-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 24px;
+  gap: 16px;  
+  margin-bottom: 24px;  
 }
 
 .footer-nav-link,
@@ -235,7 +231,7 @@ section {
   color: var(--color-white);
   font-family: var(--font-text);
   font-size: var(--text-size);
-  text-align: center;
+  justify-items: center;
 }
 
 .footer-contacts {

@@ -21,11 +21,6 @@ mobileLinks.forEach(link => {
 });
 
 
-
-
-
-
-
 const reviewSlides = document.getElementById("reviews-slides");
 
 if (reviewSlides) {
@@ -54,15 +49,6 @@ if (reviewSlides) {
   });
 }
 
-
-
-
-
-
-
-
-
-
 const items = document.querySelectorAll('.accordion-item');
 
 items.forEach(item => {
@@ -83,15 +69,6 @@ items.forEach(item => {
   plus.addEventListener('click', toggleAccordion);
 });
 
-
-
-
-
-
-
-
-
-
 const contactBtn = document.querySelector('.contact-btn');
 const contactBackdrop = document.querySelector('.contact-backdrop');
 const contactClose = document.querySelector('.close-contact-modal');
@@ -107,10 +84,6 @@ contactClose.addEventListener("click", () => {
   document.body.classList.remove('no-scroll');
 });
 
-
-
-
-
 const onTop = document.querySelector('.onTop');
 
 onTop.addEventListener('click', () => {
@@ -119,9 +92,6 @@ onTop.addEventListener('click', () => {
     behavior: 'smooth'
   });
 })
-
-
-
 
 const ourWorksSlides = document.querySelectorAll('.ourWorks-slide');
 
@@ -139,3 +109,18 @@ setInterval(() => {
     slidesCounter = 0;
   }
 }, 3000)
+
+const openWindowModal = document.getElementById('open-window-modal');
+const windowBackdrop = document.querySelector('.window-backdrop');
+const closeWindowModal = document.getElementById('close-window-modal');
+
+
+openWindowModal.addEventListener('click', () => {
+  windowBackdrop.classList.add('active');
+  document.body.classList.add('no-scroll');
+})
+
+closeWindowModal.addEventListener('click', () => {
+    windowBackdrop.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+})

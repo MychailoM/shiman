@@ -241,7 +241,13 @@
                 alt="Миття вікон"
                 class="service-card-img"
               />
-              <a href="#" class="service-card-link">Детальніше →</a>
+              <button
+                type="button"
+                id="open-window-modal"
+                class="service-card-link"
+              >
+                Детальніше →
+              </button>
             </div>
             <div class="services-card">
               <h3 class="service-card-name">Хімчистка</h3>
@@ -271,84 +277,88 @@
       </section>
 
       <section id="reviews" class="reviews">
-  <div class="container">
-    <h2 class="section-title">Відгуки</h2>
-    <div class="carousel">
-      <div class="reviews-slides" id="reviews-slides">
-        <div class="reviews-slide">
-          <h3 class="review-author">Світлана</h3>
-          <h3 class="review-rating">★★★★★</h3>
-          <p class="review-text">
-            "Після свят квартира була в жахливому стані, але клінери все швидко навели до ладу."
-          </p>
+        <div class="container reviews-container">
+          <h2 class="section-title">Відгуки</h2>
+          <div class="carousel">
+            <div class="reviews-slides" id="reviews-slides">
+              <div class="reviews-slide">
+                <h3 class="review-author">Світлана</h3>
+                <h3 class="review-rating">★★★★★</h3>
+                <p class="review-text">
+                  "Після свят квартира була в жахливому стані, але клінери все
+                  швидко навели до ладу."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Ігор</h3>
+                <h3 class="review-rating">★★★☆☆</h3>
+                <p class="review-text">
+                  "Робота виконана, проте очікував швидшого результату."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Марія</h3>
+                <h3 class="review-rating">★★★★★</h3>
+                <p class="review-text">
+                  "Дівчата приїхали вчасно, зробили все акуратно. Рекомендую!"
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Іван</h3>
+                <h3 class="review-rating">★★★★☆</h3>
+                <p class="review-text">
+                  "Офіс прибрали якісно, але трохи затягнули з часом."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Оля</h3>
+                <h3 class="review-rating">★★★☆☆</h3>
+                <p class="review-text">
+                  "Все зробили нормально, але хотілося б трохи більше уваги до
+                  деталей."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Андрій</h3>
+                <h3 class="review-rating">★★★★★</h3>
+                <p class="review-text">
+                  "Ціни адекватні, сервіс на високому рівні. Буду звертатись
+                  ще."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Олена</h3>
+                <h3 class="review-rating">★★★★☆</h3>
+                <p class="review-text">
+                  "Прибирання хороше, квартира чиста, хоча деякі куточки можна
+                  було зробити ретельніше."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Василь</h3>
+                <h3 class="review-rating">★★★★★</h3>
+                <p class="review-text">
+                  "Замовляв миття вікон у приватному будинку. Робота виконана на
+                  відмінно."
+                </p>
+              </div>
+              <div class="reviews-slide">
+                <h3 class="review-author">Марта</h3>
+                <h3 class="review-rating">★★★★☆</h3>
+                <p class="review-text">
+                  "Загалом задоволена, все якісно, але дрібні недоліки були."
+                </p>
+              </div>
+            </div>
+            <div class="controls">
+              <button class="prevSlide control-btn">Назад</button>
+              <span class="reviews-num"></span>
+              <button class="nextSlide control-btn">Вперед</button>
+            </div>
+          </div>
+          <a href="#" class="add-review">Залишити відгук</a>
         </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Ігор</h3>
-          <h3 class="review-rating">★★★☆☆</h3>
-          <p class="review-text">
-            "Робота виконана, проте очікував швидшого результату."
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Марія</h3>
-          <h3 class="review-rating">★★★★★</h3>
-          <p class="review-text">
-            "Дівчата приїхали вчасно, зробили все акуратно. Рекомендую!"
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Іван</h3>
-          <h3 class="review-rating">★★★★☆</h3>
-          <p class="review-text">
-            "Офіс прибрали якісно, але трохи затягнули з часом."
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Оля</h3>
-          <h3 class="review-rating">★★★☆☆</h3>
-          <p class="review-text">
-            "Все зробили нормально, але хотілося б трохи більше уваги до деталей."
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Андрій</h3>
-          <h3 class="review-rating">★★★★★</h3>
-          <p class="review-text">
-            "Ціни адекватні, сервіс на високому рівні. Буду звертатись ще."
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Олена</h3>
-          <h3 class="review-rating">★★★★☆</h3>
-          <p class="review-text">
-            "Прибирання хороше, квартира чиста, хоча деякі куточки можна було зробити ретельніше."
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Василь</h3>
-          <h3 class="review-rating">★★★★★</h3>
-          <p class="review-text">
-            "Замовляв миття вікон у приватному будинку. Робота виконана на відмінно."
-          </p>
-        </div>
-        <div class="reviews-slide">
-          <h3 class="review-author">Марта</h3>
-          <h3 class="review-rating">★★★★☆</h3>
-          <p class="review-text">
-            "Загалом задоволена, все якісно, але дрібні недоліки були."
-          </p>
-        </div>
-      </div>
-      <div class="controls">
-        <button class="prevSlide control-btn">Назад</button>
-        <span class="reviews-num"></span>
-        <button class="nextSlide control-btn">Вперед</button>
-      </div>
-    </div>
-    <button type="button" class="add-review">Залишити відгук</button>
-  </div>
-</section>
-
+      </section>
 
       <section class="asks" id="asks">
         <div class="container">
@@ -606,6 +616,55 @@
         </div>
       </div>
     </footer>
+
+    <div class="window-backdrop">
+      <div class="window-modal">
+        <button
+          id="close-window-modal"
+          class="close-window-modal"
+          type="button"
+        >
+          ← назад
+        </button>
+        <div class="container window-modal-container">
+          <div class="window-modal-content">
+            <h2 class="section-title window-title">Миття вікон</h2>
+            <p class="window-subtitle">
+              Миття вікон повертає світло у ваш дім. Ми ретельно очищуємо скло
+              та рами. Дбаємо про підвіконня й дрібні деталі. Прозорі вікна
+              створюють свіжість і затишок щодня.
+            </p>
+            
+            <div class="window-price-container">
+              <p class="window-describe">
+              Вартість миття вікон розраховується індивідуально з урахуванням
+              ступеня забруднення, типу вікон та умов доступу.
+            </p>
+              <h3 class="window-text">
+                Сезонне миття: <span class="window-price">від 170 грн/м²</span>
+              </h3>
+            </div>
+
+            <div class="window-price-container">
+              <h3 class="window-text">
+                Миття після ремонту:
+                <span class="window-price">від 230 грн/м²</span>
+              </h3>
+
+              <p class="window-warning">
+                якщо захисна плівка на рамах рветься або важко знімається,
+                вартість прораховується індивідуально
+              </p>
+            </div>
+
+            <a href="#" class="order-service-link order-window-service-link">Замовити прибирання</a>
+          </div>
+          <div class="window-modal-img-wrap">
+            <img src="#" alt="Миття вікон" class="window-modal-img">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="mobile-menu">
       <div class="mobile-menu-contact">
