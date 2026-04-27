@@ -191,6 +191,7 @@ section:nth-child(2n-1){
 }
 
 .mobile-menu-line {
+  display: block;
   width: 36px;
   height: 2px;
   background-color: var(--color-border);
@@ -306,7 +307,6 @@ section:nth-child(2n-1){
   display: block;
   width: 100%;
   height: 130px;
-  background-color: var(--color-second-light-bg);
   border-radius: 4px;  
   background-size: 120px;
   background-repeat: no-repeat;
@@ -798,7 +798,28 @@ section:nth-child(2n-1){
 }
 
 .order-window-service-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;  
+  background-color: var(--color-primary);
+  color: var(--color-white);  
+  font-family: var(--font-button);
+  font-weight: var(--button-weight);
+  font-size: var(--text-size);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;  
+  border-radius: var(--radius-button);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);  
   text-align: center;
+}
+
+.order-window-service-link:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  color: var(--color-white);
 }
 
 .window-modal-img-wrap {
@@ -969,6 +990,12 @@ section:nth-child(2n-1){
 .window-modal{
   padding: 100px 40px;
 }
+
+.order-window-service-link {
+    padding: 14px 32px;
+    font-size: var(--text-lg-size);
+    margin-top: 40px;
+  }
 
 }
 

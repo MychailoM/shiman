@@ -132,6 +132,7 @@ section:nth-child(2n-1){
 }
 
 .mobile-menu-line {
+  display: block;
   width: 36px;
   height: 2px;
   background-color: var(--color-gray-bg);
@@ -213,7 +214,6 @@ section:nth-child(2n-1){
   line-height: 1.5;
   opacity: 0.9;
 }
-
 
 .includes-list {
   display: flex;
@@ -436,6 +436,241 @@ section:nth-child(2n-1){
   left: -90px;
 }
 
+.sofas-box,
+.chairs-box{
+  display: grid;
+  gap: 32px;  
+  justify-content: center;
+  grid-template-columns: 1fr; 
+}
+
+.sofa-card,
+.chair-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--color-heading);  
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-bottom: 88px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.sofa-card:hover,
+.chair-card:hover{
+  transform: translateY(-12px);
+}
+
+.sofa-img,
+.chair-img{
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-muted);
+  width: 90%;
+}
+
+.sofa-info,
+.chair-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+  width: 100%;  
+}
+
+.sofa-title,
+.chair-title{
+  color: var(--color-heading);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+.sofa-price,
+.chair-price{
+  position: absolute;
+  bottom: 0;
+  color: var(--color-white);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  font-family: var(--font-heading);
+  text-align: center;
+  background-color: var(--color-heading);
+  width: 100%;
+  padding: 16px 16px;
+  border-radius: 0 0 16px 16px;
+}
+
+
+
+.beds {
+  padding: 40px 0;
+  background-color: var(--color-gray-bg);
+  font-family: var(--font-text);
+  color: var(--color-text);
+}
+
+.beds-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.bed-price-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  border: var(--border-section);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.bed-price-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.bed-price-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: var(--h3-weight);
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+}
+
+.bed-price {
+  font-size: var(--text-size);
+  font-weight: var(--text-lg-weight);
+  color: var(--color-muted);
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bed-price-deco {
+  font-size: var(--text-lg-size);
+  font-weight: var(--h4-weight);
+  color: var(--color-heading);
+  background-color: var(--color-light-bg);
+  padding: 2px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary-light);
+}
+
+.mattress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.carpets-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.carpet-card {
+  background: var(--color-white, #fff);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carpet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+  border-color: var(--color-primary, #007bff);
+}
+
+.carpet-icon-wrap {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 123, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carpet-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.carpet-info {
+  flex-grow: 1;
+}
+
+.carpet-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-heading, #222);
+  margin-bottom: 8px;
+}
+
+.carpet-descr {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.carpet-price-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--color-primary, #007bff);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.price-value {
+  font-size: 1.1rem;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 480px) {
+  .carpet-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carpet-price-tag {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
 @media (min-width: 720px) {
   .top-header {
     display: flex;
@@ -491,6 +726,56 @@ section:nth-child(2n-1){
   .flat-cards{
   grid-template-columns: repeat(2, 1fr);
 }
+
+.sofas-box,
+.chairs-box{  
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+.beds {
+    padding: 80px 0;
+  }
+
+  .beds-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  .bed-price-wrap {
+    flex-direction: row;
+    text-align: left;
+    padding: 25px;
+  }
+
+  .bed-price-wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-light);
+  }
+
+  .bed-price-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+
+  .bed-price-title {
+    font-size: var(--h3-size);
+  }
+
+  .mattress-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .bed-price {
+    
+    align-items: start;
+    font-size: var(--text-lg-size);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -563,6 +848,22 @@ section:nth-child(2n-1){
   .flat-cards{
   grid-template-columns: repeat(3, 1fr);
 }
+
+
+.sofas-box,
+.chairs-box{  
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.beds-box{  
+  grid-template-columns: repeat(3, 1fr); 
+}
+
+  .bed-price {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: var(--text-lg-size);
+  }
 }
 
 @media (min-width: 1240px) {
@@ -570,3 +871,6 @@ section:nth-child(2n-1){
   grid-template-columns: repeat(5, 1fr);
 }
 }
+
+
+
