@@ -51,10 +51,6 @@
 
   --border-section: 1px solid rgba(3, 72, 72, 0.25);
 
-  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.18);
-
   --transition: 0.35s ease;
 
   --z-base: 1;
@@ -134,14 +130,33 @@ section:nth-child(2n-1){
   opacity: 0.8;
 }
 
+.header-title-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .header-title {
   text-align: center;
   color: var(--color-white);
   font-family: var(--font-heading);
   font-size: var(--h1-size);
-  font-weight: 800;
+  font-weight: var(--h1-weight);
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   animation: fadeUp 0.8s ease;
+  margin-bottom: 0;
+}
+
+.headeer-subtitle{
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeUp 0.8s ease;
+
 }
 
 @keyframes fadeUp {
@@ -258,10 +273,18 @@ section:nth-child(2n-1){
 
 .about-img-wrap {
   padding-bottom: 20px;
+  width: 100%;
+}
+
+.about-img{
+  width: 100%;
+  border-radius: var(--radius-image);
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-content {
   padding-top: 20px;
+  width: 100%;
   border-top: 1px solid var(--color-border);
 }
 
@@ -273,12 +296,46 @@ section:nth-child(2n-1){
   margin-bottom: 20px;
 }
 
-.about-text {
+.about-text {  
   color: var(--color-text);
   font-size: var(--text-size);
   font-weight: var(--text-weight);
   font-family: var(--font-text);
+  line-height: 28px;
 }
+
+.about-text-deco{
+  font-weight: var(--text-lg-weight);
+  color: var(--color-border);
+}
+
+
+.about-text.collapsed {
+  max-height: 80px;
+  overflow: hidden;
+}
+
+#toggleBtn {
+  background: none;
+  border: none;
+  color: var(--color-heading);
+  font-weight: var(--button-weight);
+  cursor: pointer;
+  font-family: var(--font-button);
+  font-size: var(--button-size);
+  margin-top: 12px;
+}
+
+@media (min-width: 1024px) {
+  .about-text {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  #toggleBtn {
+    display: none;
+  }
+}
+
 
 .advantages-list {
   display: flex;
@@ -288,8 +345,7 @@ section:nth-child(2n-1){
 }
 
 .advantages-item {
-  width: 260px;
-  text-align: center;
+  width: 260px;  
   padding: 16px;
   border-radius: var(--radius-card);
   position: relative;
@@ -340,6 +396,7 @@ section:nth-child(2n-1){
   align-items: center;
   justify-content: center;
   gap: 32px;
+  max-width: 1170px;
 }
 
 .services-card {
@@ -897,9 +954,25 @@ section:nth-child(2n-1){
     opacity: 0.8;
   }
 
-  .header-title {
-    text-align: start;
-  }
+  .header-title-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  text-align: start;
+
+}
+
+.headeer-subtitle{
+  position: relative;
+  text-align: start;
+  left: 42%;
+}
+
+
 
   .header-paragraph {
     text-align: start;
@@ -916,6 +989,17 @@ section:nth-child(2n-1){
     border-radius: var(--radius-image);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   }
+
+  .about-img-wrap {
+  padding-bottom: 20px;
+  width: 50%;
+}
+
+.about-content {
+  padding-top: 20px;
+  width: 50%;
+  border-top: 1px solid var(--color-border);
+}
 
   .carousel {
     width: 80%;

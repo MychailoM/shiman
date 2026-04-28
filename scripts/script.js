@@ -20,6 +20,17 @@ mobileLinks.forEach(link => {
   });
 });
 
+const aboutText = document.getElementById("aboutText");
+const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.addEventListener("click", () => {
+  aboutText.classList.toggle("collapsed");
+  toggleBtn.textContent = aboutText.classList.contains("collapsed")
+    ? "Читати більше"
+    : "Згорнути";
+});
+
+
 
 const reviewSlides = document.getElementById("reviews-slides");
 

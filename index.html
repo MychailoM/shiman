@@ -88,7 +88,10 @@
           <div class="header-middle">
             <div class="middle-header-content">
               <p class="header-subtitle">Клінігова компанія</p>
-              <h1 class="header-title">Shiman</h1>
+              <div class="header-title-wrap">
+                <h1 class="header-title">Shiman</h1>
+                <h2 class="headeer-subtitle">clean</h2>
+              </div>
               <p class="header-paragraph">
                 Працюємо для вас у Львові та по всій Львівській області
               </p>
@@ -101,7 +104,11 @@
                 >
                 <a href="https://t.me/yourpage" class="social-link">Telegram</a>
 
-                <a href="https://www.tiktok.com/@shimancleann?is_from_webapp=1" class="social-link">TikTok</a>
+                <a
+                  href="https://www.tiktok.com/@shimancleann?is_from_webapp=1"
+                  class="social-link"
+                  >TikTok</a
+                >
               </div>
             </div>
             <div class="middle-header-img-wrap">
@@ -160,11 +167,35 @@
       <section class="about" id="about">
         <div class="container about-container">
           <div class="about-img-wrap">
-            <img src="#" alt="Про нас" class="about-img" />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkfWDDhdNkKvvvd6p7Up8Mbo7hzrBeVSZ6PA&s"
+              alt="Про нас"
+              class="about-img"
+            />
           </div>
           <div class="about-content">
             <h2 class="about-title">Про нас</h2>
-            <p class="about-text">Клінінгова компанія «Shiman» —</p>
+            <p class="about-text collapsed" id="aboutText">
+              <span class="about-text-deco">Shiman Clean</span> — професійна
+              клінінгова компанія у Львові, яка дарує чистоту, комфорт і
+              бездоганний сервіс. Ми маємо понад 5 років досвіду роботи за
+              кордоном, де здобули високі стандарти якості, відповідальності та
+              уважності до кожної деталі. Наша команда спеціалізується на
+              генеральному прибиранні квартир, будинків, офісів, післяремонтному
+              прибиранні, митті вікон, хімчистці меблів та підтримуючому
+              клінінгу. Ми використовуємо професійне обладнання, безпечні засоби
+              та сучасні технології очищення, щоб забезпечити ідеальний
+              результат. <br />
+              <span class="about-text-deco">Shiman Clean</span> — це не просто
+              прибирання, а турбота про ваш простір, час і комфорт. Ми працюємо
+              швидко, якісно та з любов’ю до своєї справи. Обираючи нас, ви
+              обираєте чистоту європейського рівня у Львові. <br />
+              <span class="about-text-deco"
+                >Shiman Clean — Гарант чистоти.</span
+              >
+            </p>
+            <button id="toggleBtn">Читати більше</button>
+
             <p class="about-text"></p>
           </div>
         </div>
@@ -256,7 +287,9 @@
                 alt="Хімчистка"
                 class="service-card-img"
               />
-              <a href="./pages/ua-dryCleaner.html" class="service-card-link">Детальніше →</a>
+              <a href="./pages/ua-dryCleaner.html" class="service-card-link"
+                >Детальніше →</a
+              >
             </div>
             <div class="services-card">
               <h3 class="service-card-name">
@@ -524,7 +557,7 @@
         <div class="footer-logo-wrap">
           <a href="index.html" class="footer-logo-link">
             <img
-              src="../images/ShimanCleanLogoLight.png"
+              src="./images/ShimanCleanLogoLight.png"
               alt="logo"
               class="footer-logo"
             />
@@ -535,39 +568,25 @@
             <h2 class="footer-nav-title">Навігація</h2>
             <ul class="footer-nav-list">
               <li class="footer-nav-item">
-                <a href="../index.html#about" class="footer-nav-link"
-                  >Про нас</a
-                >
+                <a href="#about" class="footer-nav-link">Про нас</a>
               </li>
               <li class="header-nav-item">
-                <a href="../index.html#advantages" class="footer-nav-link"
-                  >Наші переваги</a
-                >
+                <a href="#advantages" class="footer-nav-link">Наші переваги</a>
               </li>
               <li class="footer-nav-item">
-                <a href="../index.html#services" class="footer-nav-link"
-                  >Послуги</a
-                >
+                <a href="#services" class="footer-nav-link">Послуги</a>
               </li>
               <li class="footer-nav-item">
-                <a href="../index.html#reviews" class="footer-nav-link"
-                  >Відгуки</a
-                >
+                <a href="#reviews" class="footer-nav-link">Відгуки</a>
               </li>
               <li class="footer-nav-item">
-                <a href="../index.html#asks" class="footer-nav-link"
-                  >Часті запитання</a
-                >
+                <a href=".#asks" class="footer-nav-link">Часті запитання</a>
               </li>
               <li class="footer-nav-item">
-                <a href="../index.html#ourWorks" class="footer-nav-link"
-                  >Наші роботи</a
-                >
+                <a href="#ourWorks" class="footer-nav-link">Наші роботи</a>
               </li>
               <li class="footer-nav-item">
-                <a href="../index.html#contacts" class="footer-nav-link"
-                  >Контакти</a
-                >
+                <a href="#contacts" class="footer-nav-link">Контакти</a>
               </li>
             </ul>
           </div>
@@ -620,7 +639,9 @@
             <a href="https://t.me/yourpage" class="footer-social-link"
               >Telegram</a
             >
-            <a href="https://www.tiktok.com/@shimancleann?is_from_webapp=1" class="footer-social-link"
+            <a
+              href="https://www.tiktok.com/@shimancleann?is_from_webapp=1"
+              class="footer-social-link"
               >TikTok</a
             >
           </div>
@@ -651,35 +672,35 @@
 
       <ul class="mobile-menu-nav-list">
         <li class="mobile-menu-nav-item">
-          <a href="../index.html#about" class="mobile-menu-nav-link">Про нас</a>
+          <a href="./index.html#about" class="mobile-menu-nav-link">Про нас</a>
         </li>
         <li class="header-nav-item">
-          <a href="../index.html#advantages" class="mobile-menu-nav-link"
+          <a href="./index.html#advantages" class="mobile-menu-nav-link"
             >Наші переваги</a
           >
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="../index.html#services" class="mobile-menu-nav-link"
+          <a href="./index.html#services" class="mobile-menu-nav-link"
             >Послуги</a
           >
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="../index.html#reviews" class="mobile-menu-nav-link"
+          <a href="./index.html#reviews" class="mobile-menu-nav-link"
             >Відгуки</a
           >
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="../index.html#asks" class="mobile-menu-nav-link"
+          <a href="./index.html#asks" class="mobile-menu-nav-link"
             >Часті запитання</a
           >
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="../index.html#ourWorks" class="mobile-menu-nav-link"
+          <a href="./index.html#ourWorks" class="mobile-menu-nav-link"
             >Наші роботи</a
           >
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="../index.html#contacts" class="mobile-menu-nav-link"
+          <a href="./index.html#contacts" class="mobile-menu-nav-link"
             >Контакти</a
           >
         </li>
@@ -694,13 +715,15 @@
         <a href="https://t.me/yourpage" class="mobile-menu-social-link"
           >Telegram</a
         >
-        <a href="https://www.tiktok.com/@shimancleann?is_from_webapp=1" class="mobile-menu-social-link"
+        <a
+          href="https://www.tiktok.com/@shimancleann?is_from_webapp=1"
+          class="mobile-menu-social-link"
           >TikTok</a
         >
       </div>
 
       <div class="mobile-menu-exit-btns">
-        <a href="../index.html" class="on-the-main">На головну</a>
+        <a href="./index.html" class="on-the-main">На головну</a>
         <button type="button" class="close-mobile-menu">Закрити</button>
       </div>
     </div>
@@ -752,12 +775,12 @@
               та рами. Дбаємо про підвіконня й дрібні деталі. Прозорі вікна
               створюють свіжість і затишок щодня.
             </p>
-            
+
             <div class="window-price-container">
               <p class="window-describe">
-              Вартість миття вікон розраховується індивідуально з урахуванням
-              ступеня забруднення, типу вікон та умов доступу.
-            </p>
+                Вартість миття вікон розраховується індивідуально з урахуванням
+                ступеня забруднення, типу вікон та умов доступу.
+              </p>
               <h3 class="window-text">
                 Сезонне миття: <span class="window-price">від 170 грн/м²</span>
               </h3>
@@ -775,20 +798,17 @@
               </p>
             </div>
 
-            <a href="#" class="order-window-service-link">Замовити прибирання</a>
+            <a href="#" class="order-window-service-link"
+              >Замовити прибирання</a
+            >
           </div>
           <div class="window-modal-img-wrap">
-            <img src="#" alt="Миття вікон" class="window-modal-img">
+            <img src="#" alt="Миття вікон" class="window-modal-img" />
           </div>
         </div>
       </div>
     </div>
 
-
     <script type="module" src="./scripts/script.js"></script>
   </body>
 </html>
-
-
-    
-    
