@@ -656,7 +656,76 @@ section:nth-child(2n-1){
   font-size: 1.1rem;
 }
 
-/* Адаптивність для мобільних */
+.additionalServices {
+  background: var(--gradient-soft);
+  padding: 60px 30px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-lg);
+}
+
+.additionalServices .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.additionalService-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-text);
+  font-size: var(--text-lg-size);
+  color: var(--color-text);
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+}
+
+.additionalService-table th {
+  background: var(--gradient-hero);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: var(--h2-weight);
+  font-size: var(--h3-size);
+  text-align: left;
+  padding: 18px 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.additionalService-table td {
+  padding: 16px 22px;
+  border-bottom: 1px solid rgba(3, 72, 72, 0.1);
+  transition: var(--transition);
+}
+
+.additionalService-name {
+  font-weight: var(--text-lg-weight);
+  color: var(--color-heading);
+}
+
+.additionalService-price {
+  text-align: right;
+  font-weight: var(--h4-weight);
+  color: var(--color-primary-dark);
+}
+
+.additionalService-table tr:nth-child(even) {
+  background: var(--color-second-light-bg);
+}
+
+.additionalService-table tr:hover td {
+  background: var(--color-light-bg);
+  color: var(--color-heading);
+  box-shadow: inset 0 0 12px rgba(0, 168, 168, 0.2);
+  cursor: pointer;
+}
+
+.additionalService-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+
 @media (max-width: 480px) {
   .carpet-card {
     flex-direction: column;
@@ -779,7 +848,37 @@ section:nth-child(2n-1){
 }
 
 @media (min-width: 1024px) {
-  .header-middle {
+  .includes-open {
+    opacity: 0;
+  }
+
+  .process {
+    padding-bottom: 140px;
+  }
+
+  .flat-cards{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.sofas-box,
+.chairs-box{  
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.beds-box{  
+  grid-template-columns: repeat(3, 1fr); 
+}
+
+  .bed-price {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: var(--text-lg-size);
+  }
+}
+
+@media (min-width: 1240px) {
+    .header-middle {
     padding: 100px 0;
     gap: 120px;
   }
@@ -837,36 +936,6 @@ section:nth-child(2n-1){
     border-bottom: 2px solid var(--color-white);
   }
 
-  .includes-open {
-    opacity: 0;
-  }
-
-  .process {
-    padding-bottom: 140px;
-  }
-
-  .flat-cards{
-  grid-template-columns: repeat(3, 1fr);
-}
-
-
-.sofas-box,
-.chairs-box{  
-  grid-template-columns: repeat(4, 1fr); 
-}
-
-.beds-box{  
-  grid-template-columns: repeat(3, 1fr); 
-}
-
-  .bed-price {
-    flex-direction: row;
-    justify-content: flex-start;
-    font-size: var(--text-lg-size);
-  }
-}
-
-@media (min-width: 1240px) {
   .flat-cards{
   grid-template-columns: repeat(5, 1fr);
 }
