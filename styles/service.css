@@ -508,13 +508,6 @@ section:nth-child(2n-1){
   color: var(--color-accent-info);
 }
 
-
-
-
-.contact-btn{
-  left: -90px;
-}
-
 .sofas-box,
 .chairs-box{
   display: grid;
