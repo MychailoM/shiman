@@ -373,19 +373,21 @@ section:nth-child(2n-1){
   font-family: var(--font-text);
 }
 
+
 .flat-cards{
   display: grid;
-  gap: 24px;  
+  gap: 24px;
   justify-content: center;
-  grid-template-columns: 1fr;  
+  grid-template-columns: 1fr;
 }
 
-.flat-card{
+.flat-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid var(--color-heading);
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   padding-top: 24px;
   border-radius: 16px;
   transition: transform 0.3s ease;
@@ -431,6 +433,83 @@ section:nth-child(2n-1){
   padding: 16px 12px;
   border-radius: 0 0 16px 16px;
 }
+
+.house {
+  padding: 60px 0;
+  background: var(--color-light-bg);
+  border-top: var(--border-section);
+  border-bottom: var(--border-section);
+}
+
+.house .section-title {
+  font-family: var(--font-heading);
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  color: var(--color-heading);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.house-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.house-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--color-white);
+  border: 1px solid var(--color-heading);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  width: 372px;
+  transition: var(--transition);
+}
+
+.house-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+
+.house-img {
+  width: 100px;
+  height: auto;
+  border-radius: var(--radius-image);
+}
+
+.house-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.house-title {
+  font-family: var(--font-heading);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  color: var(--color-heading);
+}
+
+.house-area {
+  font-family: var(--font-text);
+  font-size: var(--text-lg-size);
+  font-weight: var(--text-lg-weight);
+  color: var(--color-muted);
+}
+
+.house-price {
+  font-family: var(--font-heading);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  color: var(--color-accent-info);
+}
+
+
+
 
 .contact-btn{
   left: -90px;
