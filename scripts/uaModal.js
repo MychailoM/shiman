@@ -12,3 +12,4 @@ closeWindowModal.addEventListener('click', () => {
     windowBackdrop.classList.remove('active');
     document.body.classList.remove('no-scroll');
 })
+
